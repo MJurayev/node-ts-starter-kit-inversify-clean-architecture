@@ -12,15 +12,15 @@ Loyihada ishlatiladigan buyruqlar
 
 ---
 ```
-Project structure \
-|------- domain\
-|------- infrastructure\
-|   |------- database\
-|   |------- redis\
-|   |------- Nodemailer(Email)\
-|------- repository \
-|------- presentation\
-|------- use-case\
-|------- utils\
-|------- index.ts\
+Project structure 
+|------- domain
+|------- infrastructure
+|   |------- database
+|   |------- redis
+|   |------- Nodemailer(Email)
+|------- repository 
+|------- presentation
+|------- use-case
+|------- utils
+|------- index.ts
 ```
