@@ -1,6 +1,6 @@
 import { BaseHttpController, controller, httpPost, requestBody } from "inversify-express-utils";
-import { RegisterDto } from "../../../use-case/dtos/AuthDto";
-import AuthService from "../../../use-case/auth.service";
+import { RegisterDto } from "../../use-case/dtos/AuthDto";
+import AuthService from "../../use-case/auth.service";
 
 @controller("/api/auth")
 class AuthController extends BaseHttpController {

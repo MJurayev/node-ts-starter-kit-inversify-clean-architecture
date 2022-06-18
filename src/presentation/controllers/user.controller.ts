@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { BaseHttpController, controller, httpDelete, httpGet, httpPost, requestParam } from "inversify-express-utils";
-import UserService from "../../../use-case/user.service";
+import UserService from "../../use-case/user.service";
 
 @controller("/api/users")
 class UserController extends BaseHttpController {

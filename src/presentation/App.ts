@@ -1,9 +1,9 @@
 import { Application, json, urlencoded } from "express";
 import { InversifyExpressServer } from "inversify-express-utils";
-import { MyApplication } from "./Application";
-import { DBContext } from "../../infrastructure/database/DBContext";
-import UserRepository from "../../repository/user.repository";
-import UserService from "../../use-case/user.service";
+import { MyApplication } from "../domain/Application";
+import { DBContext } from "../infrastructure/database/DBContext";
+import UserRepository from "../repository/user.repository";
+import UserService from "../use-case/user.service";
 
 
 import "./controllers/user.controller";
@@ -28,7 +28,7 @@ class App extends MyApplication {
         })
 
         this.app = server.build()
-        const port = 3030
+        const port = process.env.PORT || 3031
         this.app.listen(port, () => {
             console.log(`Server started in ${port}`)
         })

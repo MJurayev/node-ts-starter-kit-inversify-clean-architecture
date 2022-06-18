@@ -1,13 +1,13 @@
 import "reflect-metadata";
-
-import App from "./presentation/api/App";
-export async function Bootstrap(): Promise<void> {
+import "dotenv/config"
+import App from "./presentation/App";
+export async function bootstrap(): Promise<void> {
     new App({
         defaultScope: "Singleton"
     });
 }
 
-
-Bootstrap().then(() => {
+console.clear()
+bootstrap().then(() => {
     console.log("Application bootstrapped")
 })
