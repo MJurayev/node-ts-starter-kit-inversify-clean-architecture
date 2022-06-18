@@ -11,15 +11,16 @@ Loyihada ishlatiladigan buyruqlar
 5. Run `npm run prisma:studio` Prisma Studioni ochish
 
 ---
-
-Project structure
-|------- domain
-|------- infrastructure
-| |------- database
-| |------- redis
-| |------- Nodemailer(Email)
-|------- repository
-|------- presentation
-|------- use-case
-|------- utils
-|------- index.ts
+```
+Project structure \
+|------- domain\
+|------- infrastructure\
+|   |------- database\
+|   |------- redis\
+|   |------- Nodemailer(Email)\
+|------- repository \
+|------- presentation\
+|------- use-case\
+|------- utils\
+|------- index.ts\
+```
