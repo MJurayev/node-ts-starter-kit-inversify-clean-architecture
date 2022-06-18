@@ -1,19 +1,25 @@
 import { Application, json, urlencoded } from "express";
 import { InversifyExpressServer } from "inversify-express-utils";
-import { MyApplication } from "../domain/Application";
+import { BaseApplication } from "../domain/Application";
 import { DBContext } from "../infrastructure/database/DBContext";
+import MailContext from "../infrastructure/nodemailer/MailContext";
 import UserRepository from "../repository/user.repository";
 import UserService from "../use-case/user.service";
 
 
 import "./controllers/user.controller";
-class App extends MyApplication {
+class App extends BaseApplication {
     protected app: Application;
 
     async configureServices() {
+        // Dependency injection container
         this.container.bind(DBContext).toSelf()
+        this.container.bind(MailContext).toSelf()
+
+
         this.container.bind(UserRepository).toSelf()
         this.container.bind(UserService).toSelf()
+
     }
 
     async setup() {

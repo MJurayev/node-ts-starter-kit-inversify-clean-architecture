@@ -1,6 +1,6 @@
 import { Container, interfaces } from "inversify";
 
-export abstract class MyApplication {
+export abstract class BaseApplication {
     protected container: Container
     constructor(options: interfaces.ContainerOptions) {
         this.container = new Container(options)
