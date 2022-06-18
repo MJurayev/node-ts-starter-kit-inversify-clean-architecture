@@ -7,13 +7,32 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum Role {
+  ADMIN
+  USER
+  NOAUTH
+}
+
 model User {
-  id       Int    @id @default(autoincrement())
-  email    String @unique
-  password String
+  id         Int      @id @default(autoincrement())
+  email      String   @unique
+  password   String
+  firstname  String
+  lastname   String
+  phone      String
+  isVerified Boolean  @default(false)
+  roles      Role     @default(USER)
+  Tokens     Tokens[]
 
-  firstname String
-  lastname  String
-  phone     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
 
+model Tokens {
+  id           Int      @id @default(autoincrement())
+  refreshToken String
+  userId       Int
+  user         User     @relation(references: [id], fields: [userId])
+  expires      DateTime
+  createdAt    DateTime @default(now())
 }

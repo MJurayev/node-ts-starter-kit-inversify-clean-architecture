@@ -1,18 +1,13 @@
 import "reflect-metadata";
 
-import container from "./application/container";
-import App from "./application/Application";
-import prisma from "./infrastructure/database";
+import App from "./presentation/api/App";
 export async function Bootstrap(): Promise<void> {
-    const app = new App(container);
-    app.start(3030, () => {
-        console.log(`Server started in ${3030}`);
-    })
+    new App({
+        defaultScope: "Singleton"
+    });
 }
 
 
 Bootstrap().then(() => {
     console.log("Application bootstrapped")
-}).finally(() => {
-    prisma.$disconnect()
 })

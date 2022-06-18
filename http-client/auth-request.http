@@ -1,0 +1,11 @@
+###
+POST http://localhost:3030/api/auth/register
+Content-Type: application/json
+
+{
+    "phone":"",
+    "email":"",
+    "password":"",
+    "firstname":"",
+    "lastname":""
+}
