@@ -11,9 +11,7 @@ Loyihada ishlatiladigan buyruqlar
 5. Run `npm run prisma:studio` Prisma Studioni ochish
 
 ---
-![Clean architecture image](https://miro.medium.com/max/1400/1*0u-ekVHFu7Om7Z-VTwFHvg.png)
 
----
 
 ```
 Project structure 
@@ -28,3 +26,8 @@ Project structure
 |------- utils
 |------- index.ts
 ```
+---
+
+![Clean architecture image](https://miro.medium.com/max/1400/1*0u-ekVHFu7Om7Z-VTwFHvg.png)
+
+---
