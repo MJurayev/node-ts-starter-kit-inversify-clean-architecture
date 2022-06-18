@@ -1,6 +1,25 @@
 # Starter kit For nodejs developers inversify, prisma orm
 
-Steps to run this project:
+Loyihada ishlatiladigan buyruqlar
 
-1. Run `npm i` command
-2. Run `npm start` command
+---
+
+1. Run `npm i` paketlarni o'rnatish
+2. Run `npm run start:dev` development muhitida ishlatish
+3. Run `npm run prisma:migrate` hamma migratsiyalarni bazada ishlatish
+4. Run `npm run prisma:generate` `PrismaClient` paketini loyihaga qo'shish
+5. Run `npm run prisma:studio` Prisma Studioni ochish
+
+---
+
+Project structure
+|------- domain
+|------- infrastructure
+| |------- database
+| |------- redis
+| |------- Nodemailer(Email)
+|------- repository
+|------- presentation
+|------- use-case
+|------- utils
+|------- index.ts
